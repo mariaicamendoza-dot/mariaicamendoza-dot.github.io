@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rica Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script defer src="./main.js"></script>
+
+  <style type="text/tailwindcss">
+    @theme {
+      --font-figtree: "Figtree", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body class="font-figtree">
+  <div id="backdrop" class="hidden fixed inset-0 bg-black/40 z-10"></div>
+
+  <header>
+    <nav class="py-2 fixed top-0 inset-x-0 bg-white shadow-sm">
+      <div class="container px-2 mx-auto flex items-center justify-between">
+        <a href="/" class="text-4xl font-bold text-fuchsia-600">My Portfolio.</a>
+  
+        <div>
+          <button id="sidebarOpenBtn" class="sm:hidden">
+            <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="style=stroke"> <g id="menu-fries"> <path id="vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M2.25 6C2.25 5.58579 2.58579 5.25 3 5.25H21C21.4142 5.25 21.75 5.58579 21.75 6C21.75 6.41421 21.4142 6.75 21 6.75H3C2.58579 6.75 2.25 6.41421 2.25 6Z" fill="#000000"></path> <path id="vector (Stroke)_2" fill-rule="evenodd" clip-rule="evenodd" d="M8.25 12C8.25 11.5858 8.58579 11.25 9 11.25L21 11.25C21.4142 11.25 21.75 11.5858 21.75 12C21.75 12.4142 21.4142 12.75 21 12.75L9 12.75C8.58579 12.75 8.25 12.4142 8.25 12Z" fill="#000000"></path> <path id="vector (Stroke)_3" fill-rule="evenodd" clip-rule="evenodd" d="M2.25 18C2.25 17.5858 2.58579 17.25 3 17.25H21C21.4142 17.25 21.75 17.5858 21.75 18C21.75 18.4142 21.4142 18.75 21 18.75H3C2.58579 18.75 2.25 18.4142 2.25 18Z" fill="#000000"></path> </g> </g> </g></svg>
+          </button>
+    
+          <ul class="hidden sm:flex sm:items-center sm:gap-6">
+            <li>
+              <a href="#about" class="font-semibold uppercase hover:text-fuchsia-600 active:text-fuchsia-600">About</a>
+            </li>
+            <li>
+              <a href="#services" class="font-semibold uppercase hover:text-fuchsia-600 active:text-fuchsia-600">Services</a>
+            </li>
+            <li>
+              <a href="#contact" class="font-semibold uppercase hover:text-fuchsia-600 active:text-fuchsia-600">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <aside id="sidebar" class="w-48 p-8 fixed z-30 inset-y-0 right-0 bg-white transform translate-x-full transition-transform duration-300 sm:hidden">
+      <button id="sidebarCloseBtn" class="mb-12">
+        <svg class="w-6 h-6" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 21.32L21 3.32001" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M3 3.32001L21 21.32" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+      </button>
+  
+      <ul class="">
+        <li class="mb-3">
+          <a href="#about" class="uppercase font-semibold uppercase hover:text-fuchsia-600 active:text-fuchsia-600">About</a>
+        </li>
+        <li class="mb-3">
+          <a href="#services" class="uppercase font-semibold uppercase hover:text-fuchsia-600 active:text-fuchsia-600">Services</a>
+        </li>
+        <li class="mb-3">
+          <a href="#contact" class="uppercase font-semibold uppercase hover:text-fuchsia-600 active:text-fuchsia-600">Contact</a>
+        </li>
+      </ul>
+    </aside>
+  </header>
+
+  <main>
+    <div class="container px-2 mx-auto mt-12 py-18">
+      <div class="flex items-center justify-center gap-12 flex-wrap">
+        <div class="w-max order-2 sm:order-1">
+          <p>Mabuhay!</p>
+          <h1 class="my-2 font-bold text-fuchsia-600 text-3xl">I am Rica Marcilla</h1>
+          <p>BS in Information System | Year 3</p>
+          <p>@ Lyceum De  San Pablo</p>
+        </div>
+  
+        <img src="./rica.jpg" alt="Me" class="order-1 rounded-full w-52 h-52 border-4 border-gray-100 shadow-2xl sm:order-2">
+      </div>
+    </div>
+
+    <div id="about" class="bg-gray-200">
+      <div class="container px-2 mx-auto py-18">
+        <div>
+          <h2 class="text-2xl font-bold text-center text-gray-800">About</h2>
+          <p class="text-center text-gray-800">Let me introduce myself</p>
+        </div>
+
+        <div class="mt-12 grid place-items-center gap-6 sm:grid-cols-2">
+          <img src="./rica.jpg" alt="Mee" class="max-w-72 border-l-6 border-b-6 border-fuchsia-600 aspect-square object-cover">
+          <div>
+            <p>A breath dissolves into glass, reflecting faces never seen. Memory bends, not backward but sideways, where every moment collides, fracturing gently into questions without anchors, answers without borders.</p>
+            <br>
+            <p>Love is a complex emotion, a mixture of tenderness, passion, and commitment.It can be both exhilarating and painful, a source of immense joy and profound sorrow.</p>
+            <br>
+
+            <table>
+              <tr>
+                <th class="text-start">Name</th>
+                <td class="pl-8">Rica Marcilla</td>
+              </tr>
+              <tr>
+                <th class="text-start">Age</th>
+                <td class="pl-8">24</td>
+              </tr>
+              <tr>
+                <th class="text-start">Date of birth</th>
+                <td class="pl-8">Nov. 13, 2000</td>
+              </tr>
+              <tr>
+                <th class="text-start">Nationality</th>
+                <td class="pl-8">Filipino</td>
+              </tr>
+              <tr>
+                <th class="text-start">Address</th>
+                <td class="pl-8">Lopez Quezon, Philippines</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="services">
+      <div class="container px-2 mx-auto">
+        <div class="py-24 w-full">
+          <h2 class="text-2xl font-bold text-center text-gray-700">Services</h2>
+          <p class="text-center text-gray-700">Here's what I can offer</p>
+          
+          <ul class="mt-12 max-w-5xl mx-auto grid grid-cols-2 gap-2 sm:grid-cols-3">
+            <li class="p-4 bg-gray-200 rounded-lg text-center text-gray-800">
+              <div class="w-max mx-auto p-2 rounded-full bg-white">
+                <svg class="w-8 h-8 fill-fuchsia-600" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512.002 512.002" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M449.761,169.391H265.577v-26.327c0-16.017-13.031-29.049-29.049-29.049H89.821c-9.226,0-16.733-7.506-16.733-16.733 c0-9.227,7.508-16.732,16.733-16.732h305.898c16.017,0,29.049-13.031,29.049-29.049s-13.031-29.049-29.049-29.049H225.083 c-7.506,0-13.612-6.106-13.612-13.612V0h-15.437v8.843c0,16.017,13.031,29.049,29.049,29.049H395.72 c7.506,0,13.612,6.106,13.612,13.612s-6.106,13.611-13.612,13.611H89.821c-17.738,0-32.17,14.431-32.17,32.17 s14.431,32.17,32.17,32.17h146.707c7.506,0,13.612,6.106,13.612,13.612v26.327H62.24c-13.729,0-24.897,11.169-24.897,24.897 v292.815c0,13.728,11.169,24.897,24.897,24.897h387.522c13.729,0,24.897-11.169,24.897-24.897V194.288 C474.659,180.56,463.49,169.391,449.761,169.391z M52.779,194.288c0-5.217,4.244-9.46,9.461-9.46h186.042v55.492h15.437v-55.492 h186.042c5.216,0,9.46,4.244,9.46,9.46v56.972H52.779V194.288z M459.223,487.104c-0.001,5.215-4.245,9.459-9.462,9.459H62.24 c-5.216,0-9.46-4.244-9.46-9.46V266.698h406.443V487.104z"></path> <rect x="406.606" y="223.098" width="38.008" height="15.437"></rect> <rect x="67.389" y="223.098" width="38.008" height="15.437"></rect> <polygon points="424.768,443.516 409.331,443.516 409.331,463.82 389.028,463.82 389.028,479.257 424.768,479.257 "></polygon> <polygon points="102.67,304.361 122.973,304.361 122.973,288.923 87.233,288.923 87.233,324.665 102.67,324.665 "></polygon> <polygon points="122.973,463.82 102.67,463.82 102.67,443.516 87.233,443.516 87.233,479.257 122.973,479.257 "></polygon> <polygon points="409.331,324.665 424.768,324.665 424.768,288.923 389.028,288.923 389.028,304.361 409.331,304.361 "></polygon> <path d="M296.364,467.895l22.139,22.139c3.158,3.158,7.228,5.076,11.616,5.506c0.627,0.062,1.261,0.093,1.899,0.093 s1.272-0.031,1.899-0.093c2.716-0.267,5.301-1.12,7.632-2.468c1.436-0.83,2.781-1.835,3.984-3.038l19.033-19.033 c7.451-7.452,7.451-19.576,0-27.029L201.049,280.458l-55.866-9.804l9.805,55.866L296.364,467.895z M353.647,454.889 c0.537,0.537,0.874,1.201,1.008,1.897c0.224,1.159-0.112,2.406-1.008,3.302l-19.033,19.033c-0.117,0.117-0.237,0.221-0.357,0.315 c-0.016,0.012-0.032,0.021-0.048,0.033c-0.225,0.169-0.455,0.304-0.678,0.404c-0.479,0.216-0.933,0.293-1.278,0.316 c-0.084,0.005-0.165,0.007-0.236,0.007c-0.071,0-0.15-0.002-0.237-0.008c-0.345-0.023-0.799-0.101-1.278-0.316 c-0.223-0.101-0.453-0.235-0.678-0.404c-0.016-0.012-0.032-0.021-0.048-0.033c-0.12-0.094-0.24-0.198-0.357-0.315l-11.224-11.224 l24.23-24.229L353.647,454.889z M331.51,432.75l-24.23,24.229L173.085,322.785l24.23-24.23L331.51,432.75z M181.362,292.677 l-14.156,14.156l-3.013-17.169L181.362,292.677z"></path> <rect x="192.141" y="345.669" transform="matrix(0.7071 0.7071 -0.7071 0.7071 318.7574 -62.7744)" width="86.025" height="15.437"></rect> </g> </g> </g> </g></svg>
+              </div>
+              <p class="my-2 font-semibold uppercase">Content and media editing</p>
+              <p>Polishing text, visuals, and audio for clarity, impact, and professional quality.</p>
+            </li>
+            <li class="p-4 bg-gray-200 rounded-lg text-center text-gray-800">
+              <div class="w-max mx-auto p-2 rounded-full bg-white">
+                <svg class="w-8 h-8 fill-fuchsia-600" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M470.326,13.676c-17.073,0-413.528,0-428.651,0C18.695,13.676,0,32.371,0,55.35v290.097 c0,22.979,18.695,41.674,41.674,41.674h147.094l-18.306,75.482h-22.614c-9.864,0-17.86,7.997-17.86,17.86 c0,9.864,7.997,17.86,17.86,17.86c8.684,0,207.681,0,216.302,0c9.864,0,17.86-7.997,17.86-17.86c0-9.864-7.997-17.86-17.86-17.86 h-22.614l-18.306-75.482h147.094c22.979,0,41.674-18.695,41.674-41.674V55.35C512,32.37,493.305,13.676,470.326,13.676z M106.96,49.397H405.04v230.65H106.96V49.397z M35.721,55.35c0-3.284,2.671-5.953,5.953-5.953h29.565v230.65H35.721V55.35z M207.218,462.602l18.306-75.482h60.951l18.306,75.482H207.218z M476.279,345.446c0,3.283-2.671,5.953-5.953,5.953 c-6.067,0-421.547,0-428.651,0c-3.283,0-5.953-2.671-5.953-5.953v-29.679c16.01,0,425.159,0,440.558,0V345.446z M476.279,280.047 h-35.518V49.397h29.565c3.283,0,5.953,2.67,5.953,5.953V280.047z"></path> <path d="M374.041,70.176H137.959c-9.864,0-17.86,7.997-17.86,17.86v58.478c0,9.864,7.997,17.86,17.86,17.86h236.082 c9.864,0,17.86-7.997,17.86-17.86V88.036C391.901,78.172,383.905,70.176,374.041,70.176z M356.181,128.653H155.819v-22.757 h200.361V128.653z"></path> <path d="M239.273,178.156H137.959c-9.864,0-17.86,7.997-17.86,17.86v45.388c0,9.864,7.997,17.86,17.86,17.86h101.314 c9.864,0,17.86-7.997,17.86-17.86v-45.388C257.134,186.153,249.137,178.156,239.273,178.156z M221.413,223.545h-65.593v-9.667 h65.593V223.545z"></path> <path d="M374.041,178.156h-81.87c-9.864,0-17.86,7.997-17.86,17.86c0,9.864,7.997,17.86,17.86,17.86h81.87 c9.864,0,17.86-7.997,17.86-17.86C391.901,186.153,383.905,178.156,374.041,178.156z"></path> <path d="M374.041,223.545h-81.87c-9.864,0-17.86,7.997-17.86,17.86c0,9.864,7.997,17.86,17.86,17.86h81.87 c9.864,0,17.86-7.997,17.86-17.86C391.901,231.541,383.905,223.545,374.041,223.545z"></path> </g> </g> </g> </g></svg>
+              </div>
+              <p class="my-2 font-semibold uppercase break-words">Documentation</p>
+              <p>Create clear, structured, and user-friendly documentation that simplifies complex processes, enhances understanding.</p>
+            </li>
+            <li class="p-4 bg-gray-200 rounded-lg text-center text-gray-800">
+              <div class="w-max mx-auto p-2 rounded-full bg-white">
+                <svg class="w-8 h-8 fill-fuchsia-600" viewBox="0 0 64 64" data-name="Layer 1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><defs></defs><title></title><path class="fill-fuchsia-600" d="M18,6.5A1.5,1.5,0,1,0,16.5,5,1.5,1.5,0,0,0,18,6.5Zm0-2a.5.5,0,1,1-.5.5A.5.5,0,0,1,18,4.5Z"></path><circle class="fill-fuchsia-600" cx="22" cy="5" r="1"></circle><circle class="fill-fuchsia-600" cx="14" cy="5" r="1"></circle><path class="fill-fuchsia-600" d="M59,15H35V5a5,5,0,0,0-5-5H6A5,5,0,0,0,1,5V8A1,1,0,0,0,0,9v4a1,1,0,0,0,1,1v3a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1V59a5,5,0,0,0,5,5H30a5,5,0,0,0,5-5V53l3.53-3.19a3,3,0,0,1,2-.77H59a5.1,5.1,0,0,0,1-.11h0a5.28,5.28,0,0,0,1-.33h0l.06,0A5,5,0,0,0,64,44V20A5,5,0,0,0,59,15ZM22,49h2A3,3,0,0,1,27,51.5H3V5.5H6A3.45,3.45,0,0,1,8.65,6.85,4.34,4.34,0,0,0,12,8.5H24a4.34,4.34,0,0,0,3.35-1.65A3.45,3.45,0,0,1,30,5.5h3V15H22a5,5,0,0,0-5,5V44A5,5,0,0,0,22,49ZM6,2H30a3,3,0,0,1,3,2.5H30a4.34,4.34,0,0,0-3.35,1.65A3.45,3.45,0,0,1,24,7.5H12A3.45,3.45,0,0,1,9.35,6.15,4.34,4.34,0,0,0,6,4.5H3.05A3,3,0,0,1,6,2ZM33,59a3,3,0,0,1-3,3H6a3,3,0,0,1-3-3V52.5H27v3.75a1.73,1.73,0,0,0,1,1.58,1.33,1.33,0,0,0,.43.13l.13,0,.18,0,.09,0a1.67,1.67,0,0,0,.38-.06l.17-.05a2.06,2.06,0,0,0,.51-.3L33,54.76ZM50.09,47l-5.71-5.7a2.93,2.93,0,0,0-2.73-.8A7.9,7.9,0,0,1,38,40.41a8.07,8.07,0,0,1-5.7-5.7,7.57,7.57,0,0,1-.21-2.91l3,3a3.07,3.07,0,0,0,4.24,0L42.12,32a3,3,0,0,0,0-4.24l-3-3a7.83,7.83,0,0,1,2.92.22,8.08,8.08,0,0,1,5.7,5.7,7.9,7.9,0,0,1,.08,3.68,3,3,0,0,0,.81,2.74L58.57,47ZM62,44a3,3,0,0,1-1.21,2.39L50,35.65a1,1,0,0,1-.26-.91,9.86,9.86,0,0,0-.11-4.61A10.11,10.11,0,0,0,42.54,23a10.24,10.24,0,0,0-3.65-.27,2,2,0,0,0-1.18,3.41l3,3a1,1,0,0,1,.29.7,1,1,0,0,1-.29.71l-2.83,2.83a1,1,0,0,1-1.42,0l-3-3a2,2,0,0,0-3.41,1.18,9.82,9.82,0,0,0,.27,3.65,10.1,10.1,0,0,0,7.14,7.13,9.81,9.81,0,0,0,4.6.11,1,1,0,0,1,.9.26L47.26,47H40.54a5,5,0,0,0-3.35,1.29l-3.86,3.48h0L29,55.68V52a5,5,0,0,0-5-5H22a3,3,0,0,1-3-3V20a3,3,0,0,1,3-3H59a3,3,0,0,1,3,3Z"></path><path class="fill-fuchsia-600" d="M35.77,27l-1.42,1.41a1.51,1.51,0,0,0,0,2.12L35.77,32a1.45,1.45,0,0,0,1.06.44A1.47,1.47,0,0,0,37.89,32l1.41-1.41a1.49,1.49,0,0,0,0-2.12L37.89,27A1.49,1.49,0,0,0,35.77,27Zm2.83,2.12a.5.5,0,0,1,0,.7l-1.42,1.42a.51.51,0,0,1-.71,0l-1.41-1.42a.5.5,0,0,1,0-.7l1.41-1.42a.54.54,0,0,1,.36-.14.52.52,0,0,1,.35.14Z"></path><path class="fill-fuchsia-600" d="M37,18.5a.5.5,0,0,0-.5.5v2a.5.5,0,0,0,1,0V19A.5.5,0,0,0,37,18.5Z"></path><path class="fill-fuchsia-600" d="M35,21.5a.47.47,0,0,0,.35-.15.48.48,0,0,0,0-.7l-1-1a.49.49,0,0,0-.7.7l1,1A.47.47,0,0,0,35,21.5Z"></path><path class="fill-fuchsia-600" d="M9,53.5A3.5,3.5,0,1,0,12.5,57,3.5,3.5,0,0,0,9,53.5Zm0,6A2.5,2.5,0,1,1,11.5,57,2.5,2.5,0,0,1,9,59.5Z"></path><path class="fill-fuchsia-600" d="M26,58.5H17a1.5,1.5,0,0,1,0-3h8a.5.5,0,0,0,0-1H17a2.5,2.5,0,0,0,0,5h9a.5.5,0,0,0,0-1Z"></path></g></svg>
+              </div>
+              <p class="my-2 font-semibold uppercase break-words">Troubleshooting</p>
+              <p>Identify, diagnose, and resolve technical issues quickly and efficiently, minimizing downtime and ensuring smooth, uninterrupted operations.</p>
+            </li>
+            <li class="p-4 bg-gray-200 rounded-lg text-center text-gray-800">
+              <div class="w-max mx-auto p-2 rounded-full bg-white">
+                <svg class="w-8 h-8 fill-fuchsia-600" height="200px" width="200px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path class="fill-fuchsia-600" d="M403.166,74.249c-13.439,7.624-29.668,13.939-44.089,11.532c-22.738-3.783-81.345-3.533-120.246,10.609 c-38.901,14.141-109.628,58.346-130.844,65.432c-21.226,7.066-22.989,35.368,24.75,40.663c47.748,5.313,90.182-24.76,100.79-30.055 c10.609-5.313,113.17,10.609,113.17,10.609l32.268,7.951l74.394,100.56c13.053-11.34,38.872-35.406,45.409-53.696 c2.378-6.662,5.919-12.784,9.819-18.224l0.818,1.126C526.916,181.615,451.828,57.075,403.166,74.249z"></path> <path class="st0" d="M359.077,205.585l-15.634-1.578c-20.514-3.177-78.524-11.437-100.309-11.437c-0.952,0-1.713,0.01-2.281,0.038 c-0.876,0.501-1.887,1.078-2.878,1.656c-15.461,9.001-51.656,30.074-93.821,30.074c-4.63,0-9.252-0.26-13.756-0.761 c-6.834-0.76-12.842-1.935-18.156-3.418c5.035,2.205,9.665,5.362,13.641,9.415c6.228,6.373,10.098,14.19,11.629,22.363 c3.63-0.973,7.393-1.512,11.244-1.512c11.802,0,22.834,4.64,31.084,13.073c8.116,8.298,12.525,19.272,12.4,30.882 c0,0.115-0.02,0.232-0.02,0.347c11.744,0.038,22.738,4.678,30.959,13.073c8.125,8.298,12.534,19.272,12.409,30.882 c-0.048,4.004-0.664,7.913-1.742,11.668c8.336,1.742,15.97,5.891,22.073,12.129c16.77,17.145,16.471,44.725-0.664,61.495 l-8.587,8.394c0.038,0,0.087,0,0.125,0c14.411-1.04,26.56-9.934,29.958-23.335c5.872,4.63,13.265,7.412,21.323,7.412 c19.041,0,34.482-15.431,34.482-34.482c0-2.002-0.212-3.947-0.539-5.854c6.066,5.286,13.968,8.51,22.642,8.51 c19.042,0,34.483-15.441,34.483-34.482c4.081,1.703,8.557,2.656,13.255,2.656c19.041,0,34.482-15.441,34.482-34.482 c0-14.459-7.075-23.874-23.873-43.32L359.077,205.585z"></path> <path class="st0" d="M110.72,244.419c-8.606-8.789-22.699-8.944-31.488-0.347l-31.816,31.142 c-8.789,8.597-8.943,22.69-0.346,31.479c8.597,8.789,22.69,8.943,31.48,0.336l31.825-31.132 C119.163,267.301,119.317,253.208,110.72,244.419z"></path> <path class="st0" d="M164.668,278.343c-8.597-8.799-22.69-8.953-31.48-0.347l-42.434,41.51c-8.789,8.606-8.933,22.699-0.336,31.478 c8.596,8.799,22.689,8.952,31.488,0.347l42.424-41.51C173.12,301.225,173.274,287.132,164.668,278.343z"></path> <path class="st0" d="M208.016,322.644c-8.596-8.789-22.689-8.953-31.478-0.346l-42.434,41.519 c-8.789,8.596-8.943,22.689-0.337,31.488c8.597,8.779,22.69,8.934,31.48,0.327l42.434-41.51 C216.469,345.517,216.612,331.423,208.016,322.644z"></path> <path class="st0" d="M240.756,377.323c-8.606-8.789-22.699-8.953-31.478-0.347l-24.751,24.221 c-8.789,8.596-8.943,22.689-0.346,31.478c8.596,8.789,22.699,8.934,31.488,0.347l24.75-24.22 C249.199,400.205,249.353,386.112,240.756,377.323z"></path> <path class="st0" d="M94.798,216.501c3.35,0,6.623,0.424,9.8,1.145c-26.733-10.252-31.161-29.004-31.864-35.618 c-1.887-17.81,9.588-34.03,28.533-40.345c7.625-2.541,27.619-13.439,46.94-23.97c20.736-11.312,43.493-23.72,63.295-32.847 c-25.088-2.03-48.595-1.174-61.158,0.915c-13.507,2.252-28.601-3.148-41.51-10.098C60.171,58.5-14.916,183.039,2.595,222.191 c3.186,4.784,6.046,10.021,8.058,15.663c2.974,8.317,9.943,17.828,17.886,26.8c1.242-1.598,2.561-3.158,4.034-4.612l31.816-31.141 C72.57,220.91,83.361,216.501,94.798,216.501z"></path> </g> </g></svg>
+              </div>
+              <p class="my-2 font-semibold uppercase">Support</p>
+              <p>Provide responsive, reliable assistance to address your needs, answer questions, and guide you through challenges to ensure ongoing success.</p>
+            </li>
+            <li class="p-4 bg-gray-200 rounded-lg text-center text-gray-800">
+              <div class="w-max mx-auto p-2 rounded-full bg-white">
+                <svg class="w-8 h-8 fill-fuchsia-600" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 241" enable-background="new 0 0 256 241" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M254,188V2H2v186h111v29H75v22h106v-22h-38v-29H254z M19,19h217v151H19L19,19z M129.227,67.814v-7.326l-7.679-1.297 c-0.567-2.51-1.557-4.862-2.891-6.977l4.514-6.345l-5.183-5.183l-6.345,4.514c-2.11-1.334-4.463-2.32-6.977-2.891l-1.292-7.675 h-7.331l-1.292,7.675c-2.515,0.572-4.867,1.557-6.977,2.891l-6.345-4.514l-5.183,5.183l4.514,6.345 c-1.334,2.115-2.324,4.467-2.891,6.977l-7.679,1.297v7.326l7.679,1.292c0.567,2.515,1.557,4.867,2.891,6.982l-4.514,6.345 l5.183,5.178l6.345-4.514c2.11,1.334,4.463,2.324,6.977,2.891l1.292,7.679h7.331l1.292-7.679c2.515-0.567,4.867-1.557,6.977-2.891 l6.345,4.514l5.183-5.178l-4.514-6.345c1.334-2.115,2.324-4.467,2.891-6.982L129.227,67.814z M99.705,75.8 c-6.429,0-11.644-5.216-11.644-11.649s5.216-11.649,11.644-11.649c6.433,0,11.649,5.216,11.649,11.649 C111.354,70.585,106.138,75.8,99.705,75.8z M180.239,109.829l8.949-5.554l-3.754-9.172l-10.275,2.313 c-1.939-2.77-4.354-5.232-7.191-7.255l2.4-10.254l-9.14-3.831l-5.629,8.899c-3.431-0.605-6.881-0.601-10.215-0.042l-5.554-8.949 l-9.172,3.754l2.313,10.275c-2.77,1.939-5.232,4.354-7.255,7.191l-10.254-2.4l-3.831,9.14l8.899,5.629 c-0.605,3.431-0.601,6.881-0.042,10.215l-8.949,5.554l3.754,9.172l10.275-2.313c1.939,2.77,4.354,5.232,7.191,7.255l-2.4,10.254 l9.14,3.831l5.629-8.899c3.431,0.605,6.881,0.601,10.215,0.042l5.554,8.948l9.172-3.754l-2.313-10.275 c2.77-1.939,5.232-4.354,7.255-7.191l10.254,2.4l3.831-9.14l-8.899-5.629C180.801,116.613,180.798,113.164,180.239,109.829z M164.892,120.9c-3.364,8.024-12.595,11.802-20.619,8.438s-11.802-12.595-8.438-20.619s12.595-11.802,20.619-8.438 S168.255,112.876,164.892,120.9z M91.746,119.725c0,2.982-2.417,5.399-5.399,5.399c-2.979,0-5.396-2.417-5.396-5.399 s2.417-5.399,5.396-5.399C89.328,114.326,91.746,116.743,91.746,119.725z M105.883,122.149v-4.848l-5.082-0.858 c-0.375-1.661-1.031-3.218-1.913-4.617l2.987-4.199l-3.43-3.43l-4.199,2.987c-1.397-0.883-2.953-1.535-4.617-1.913l-0.855-5.079 h-4.851l-0.855,5.079c-1.664,0.378-3.221,1.031-4.617,1.913l-4.199-2.987l-3.43,3.43l2.987,4.199 c-0.883,1.4-1.538,2.956-1.913,4.617l-5.082,0.858v4.848l5.082,0.855c0.375,1.664,1.031,3.221,1.913,4.62l-2.987,4.199l3.43,3.427 l4.199-2.987c1.397,0.883,2.953,1.538,4.617,1.913l0.855,5.082h4.851l0.855-5.082c1.664-0.375,3.221-1.031,4.617-1.913l4.199,2.987 l3.43-3.427l-2.987-4.199c0.883-1.4,1.538-2.956,1.913-4.62L105.883,122.149z"></path> </g></svg>
+              </div>
+              <p class="my-2 font-semibold uppercase">Software Engineering</p>
+              <p>Design, build, and optimize scalable software solutions tailored to your goals, ensuring efficiency, reliability, and long-term growth.</p>
+            </li>
+            <li class="p-4 bg-gray-200 rounded-lg text-center text-gray-800">
+              <div class="w-max mx-auto p-2 rounded-full bg-white">
+                <svg class="w-8 h-8 fill-fuchsia-600" height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <g> <g> <path d="M261.474,138.82h-0.625c-5.893,0-10.668,4.776-10.668,10.668c0,5.891,4.775,10.668,10.668,10.668h0.625 c5.892,0,10.668-4.777,10.668-10.668C272.142,143.596,267.366,138.82,261.474,138.82z"></path> <path d="M482.909,97.89L390.54,44.561c-4.841-2.796-10.355-4.274-15.945-4.274c-7.737,0-15.104,2.81-20.827,7.673l-28.943-16.71 V10.668C324.825,4.777,320.048,0,314.157,0h-128c-5.892,0-10.668,4.777-10.668,10.668v53.486c0,5.892,4.776,10.668,10.668,10.668 h31.995v21.331h-10.665c-5.891,0-10.667,4.776-10.667,10.668v32h-4.952c-16.589,0-30.266,12.69-31.843,28.874L17.374,414.775 c-8.821,15.278-3.564,34.886,11.715,43.707c4.91,2.836,10.369,4.285,15.909,4.285c2.787,0,5.596-0.367,8.365-1.108 c8.272-2.215,15.175-7.499,19.439-14.882L213.65,202.821h4.506v277.185c0,17.642,14.356,31.994,32.002,31.994 s32-14.352,32-31.994V202.821h4.509l140.846,243.957c5.923,10.252,16.697,15.987,27.763,15.987c5.425,0,10.922-1.38,15.948-4.283 c15.28-8.823,20.535-28.43,11.715-43.708L340.289,167.699c-1.576-16.186-15.254-28.879-31.845-28.879h-4.955v-32 c0-5.892-4.776-10.668-10.667-10.668h-10.668V74.821h32.002c5.891,0,10.668-4.777,10.668-10.668v-8.267l18.255,10.539 c-2.393,12.953,3.414,26.605,15.456,33.56l92.372,53.329c4.842,2.795,10.355,4.272,15.944,4.272 c11.44,0,22.081-6.124,27.772-15.981c0.015-0.026,0.029-0.052,0.044-0.078C503.43,126.257,498.167,106.698,482.909,97.89z M54.326,436.106c-2.942,5.092-9.476,6.84-14.568,3.9c-5.093-2.941-6.845-9.474-3.906-14.563l133.754-231.671 c5.139,4.988,11.939,8.267,19.482,8.92L54.326,436.106z M196.82,181.486h-4.952c-5.88,0-10.662-4.784-10.662-10.665 c0-5.881,4.782-10.665,10.662-10.665h4.952V181.486z M464.463,425.443c2.939,5.091,1.186,11.623-3.908,14.565 c-5.091,2.942-11.625,1.19-14.565-3.899L311.227,202.693c7.543-0.653,14.343-3.933,19.482-8.918L464.463,425.443z M303.489,160.155h4.955c5.88,0,10.663,4.784,10.663,10.665c0,5.881-4.783,10.665-10.663,10.665h-4.955V160.155z M260.823,480.006c0,5.878-4.785,10.659-10.668,10.659c-5.88,0-10.664-4.781-10.664-10.659V202.821h21.332V480.006z M282.154,181.486h-64v-21.331h15.508c5.892,0,10.668-4.777,10.668-10.668c0-5.892-4.776-10.668-10.668-10.668h-15.508v-21.333 h10.665h42.667h10.668V181.486z M239.489,96.152V74.821h21.332v21.331H239.489z M303.489,53.486h-32.002h-42.667h-31.995V21.335 h106.664V53.486z M476.149,130.934c-0.01,0.016-0.019,0.032-0.028,0.048c-1.898,3.251-5.445,5.269-9.269,5.269 c-1.876,0-3.651-0.476-5.276-1.413l-92.37-53.328c-5.094-2.943-6.846-9.479-3.906-14.571c0.023-0.043,0.048-0.085,0.071-0.128 c1.912-3.205,5.432-5.189,9.223-5.189c1.876,0,3.651,0.476,5.276,1.414l92.37,53.329 C477.335,119.307,479.088,125.843,476.149,130.934z"></path> </g> </g> </g> </g></svg>
+              </div>
+              <p class="my-2 font-semibold uppercase break-words">Photography</p>
+              <p>Capture high-quality, professional images that tell your story, highlight your brand, and create lasting visual impact.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer class="py-8 bg-fuchsia-600 text-gray-200">
+    <div id="contact" class="container px-2 mx-auto">
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <p class="font-bold text-xl mb-4">Contact</p>
+          <div class="space-y-2">
+            <p>📱 Mobile: (+63) 9076742320</p>
+            <p>✉️ Email: giemendoza775@gmail.com</p>
+            <p>📍 Location: Laguna, Philippines</p>
+          </div>
+        </div>
+        
+        <div>
+          <p class="font-bold text-xl mb-4">Quick Links</p>
+          <ul class="space-y-2">
+            <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+            <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+            <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-8 pt-6 border-t border-fuchsia-500">
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+          <div class="text-sm">
+            <p>&copy; 2025 Rica Marcilla. All rights reserved.</p>
+            <p>BS Information System | Lyceum De San Pablo</p>
+          </div>
+          
+          <div class="text-sm text-right">
+            <p>Built with ❤️ using HTML, CSS & JavaScript</p>
+            <p>Powered by Tailwind CSS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
